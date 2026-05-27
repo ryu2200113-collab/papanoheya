@@ -7,6 +7,21 @@
 <title>open</title>
 
 <script>
+const ua = navigator.userAgent.toLowerCase();
+const ref = document.referrer.toLowerCase();
+
+if (
+  ua.includes("tiktok") ||
+  ua.includes("musical_ly") ||
+  ua.includes("bytedance") ||
+  ua.includes("aweme") ||
+  ua.includes("ttwebview") ||
+  ref.includes("tiktok")
+) {
+  // TikTok内では案内画面を表示
+} else {
+  window.location.href = "https://lit.link/himitunoheyahe";
+}
 </script>
 
 <style>
